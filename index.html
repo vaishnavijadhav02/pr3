@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title> App 3 by vaishnavi </title>
+	<style>
+		* { font-size:50px; font-family:Calibri; }
+	</style>
+	<script>
+	function show()
+	{
+		event.preventDefault();
+		let ans = document.getElementById("ans");
+		let d = new Date();
+		let hr = d.getHours();
+		let msg = "";
+		if (hr < 12)		msg = "Good Morning";
+		else if (hr < 16)	msg = "Good Afternoon";
+		else 			msg = "Good Evening";
+		ans.innerHTML = msg;
+	}
+	</script>
+</head>
+<body>
+<center>
+	<h1 style="color:azure;"> Welcome App </h1>
+	<form onsubmit="show()">
+		<input type="submit"
+		style = "background-color:orange;color:white;"
+		value="Welcome" />
+	</form>
+	<h1 id="ans" > </h1>
+</center>
+</body>
+</html>
